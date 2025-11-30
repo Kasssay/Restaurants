@@ -1,0 +1,10 @@
+<p>Date:</p>
+
+<form #dateForm="ngForm" (Submit)="examineReservation(dateForm)">
+         
+            <input type="date" name="date"  required ngModel /> 
+            <p>Number of persons:</p>
+             <input type="number" name="numberOfPersons"  placeholder="Number of Persons" required ngModel /> 
+           
+             <input type="submit" value="Submit" />
+    </form>

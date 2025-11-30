@@ -1,0 +1,11 @@
+<p>Give your name:</p>
+ <form #addressForm="ngForm" (submit)="saveAddress(addressForm)">
+         
+            <input type="text" name="guestName" placeholder="Your name" required ngModel /> 
+            <p>Give your phone number:</p>
+             <input type="number" name="guestPhone"  placeholder="Your phone number" required ngModel /> 
+            <input type="submit" value="Submit" />
+     </form>
+
+
+ 

@@ -1,0 +1,35 @@
+
+<h1> Restaurants :</h1>
+<table class="table">  
+    <tr>
+        <th>ID</th>
+        <th> NAME</th>
+        <th> OPENING </th>
+        <th> CLOSING   </th>
+    </tr>
+
+    
+        <tr *ngFor="let restaurant of getRestaurants()">
+            <td > {{restaurant.getId()}}</td>
+            <td > {{restaurant.getName()}}</td>
+            <td > {{restaurant.getOpening()}}</td>
+            <td > {{restaurant.getClosing()}} </td>
+
+        </tr>
+    
+    </table>
+     <form #restaurantForm="ngForm" (submit)="selectRestaurant(restaurantForm)">
+         <select name="restaurantId" ngModel>
+             <option *ngFor="let restaurant of getRestaurants()"  value="restaurant.getId()">
+                  {{ restaurant.getName() }}
+             </option>
+            </select>
+
+            <input type="submit" value="Submit" />
+     </form>
+
+
+
+
+
+
